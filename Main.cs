@@ -103,7 +103,7 @@ namespace ColoredSmokes
                         PlayerColors[steamId.SteamId64] = color;
                         var player = Utilities.GetPlayerFromSteamId(steamId.SteamId64);
                         if (player != null) {
-                            player.PrintToChat($"Your saved smoke color ({result}) has been loaded.");
+                            player.PrintToChat($"Your smoke color ({result}) has been loaded.");
                         }
                     });
                 }
@@ -119,7 +119,7 @@ namespace ColoredSmokes
             });
         }
 
-        [ConsoleCommand("css_smoke", "Set your smoke grenade color")]
+        [ConsoleCommand("css_smoke", "Set your smoke color")]
         public async void OnCommandSmokeColor(CCSPlayerController? player, CommandInfo command) {
             if (player == null || player.AuthorizedSteamID == null) return;
 
